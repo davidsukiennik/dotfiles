@@ -9,7 +9,10 @@ zstyle :compinstall filename '/home/davidsukiennik/.zshrc'
 
 # End of lines added by compinstall
 
-ZIM_HOME=.cache/zim
+export EDITOR=lvim
+alias vim=lvim
+
+ZIM_HOME=~/.zim
 
 ## begin of zim section
 
