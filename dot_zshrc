@@ -9,6 +9,9 @@ zstyle :compinstall filename '/home/davidsukiennik/.zshrc'
 
 # End of lines added by compinstall
 
+export PATH=~/.local/bin:$PATH
+
+setopt correct
 export EDITOR=lvim
 alias vim=lvim
 
