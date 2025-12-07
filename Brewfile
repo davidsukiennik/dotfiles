@@ -1,0 +1,5 @@
+brew "git-credential-oauth"
+brew "zimfw"
+brew "diff-so-fancy"
+brew "neovim"
+brew "git-extras"

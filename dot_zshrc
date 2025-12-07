@@ -17,6 +17,10 @@ alias vim=lvim
 
 ZIM_HOME=~/.zim
 
+### bling.sh source start
+test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+### bling.sh source end
+
 ## begin of zim section
 
 # Download zimfw plugin manager if missing.
@@ -33,3 +37,5 @@ fi
 source ${ZIM_HOME}/init.zsh
 
 ##end of zim section
+
+eval "$(starship init zsh)"

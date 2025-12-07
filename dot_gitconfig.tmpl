@@ -1,0 +1,50 @@
+[user]
+        email = {{ .email | quote }}
+        name = David Sukiennik
+[credential]
+	helper = cache --timeout 21600
+	helper = oauth
+[core]
+        pager = diff-so-fancy | less --tabs=4 -RF
+[interactive]
+        diffFilter = diff-so-fancy --patch
+[diff]
+        colorMoved = zebra
+        colorMovedWS = allow-indentation-change
+        mnemonicPrefix = true
+        renames = true
+[rebase]
+        autosquash = true
+        updateRefs = true
+        autoStash = true
+[push]
+        default = simple
+        autoSetupRemote = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoUpdate = true
+[branch]
+        sort = -committerdate
+[alias]
+        fp = push --force-with-lease
+        bblame = blame -w -C -C -C
+        bgrep = grep --function-context --line-number
+[column]
+        ui = auto
+[blame]
+        coloring = repeatedLines
+[pull]
+        rebase = true
+[help]
+        autocorrect = immediate
+[tag]
+        sort = version:refname
+[merge]
+        conflictstyle = zdiff3
+
