@@ -5,9 +5,9 @@
 	helper = cache --timeout 21600
 	helper = oauth
 [core]
-        pager = diff-so-fancy | less --tabs=4 -RF
+        pager = delta
 [interactive]
-        diffFilter = diff-so-fancy --patch
+        diffFilter = delta --color-only
 [diff]
         colorMoved = zebra
         colorMovedWS = allow-indentation-change
@@ -48,3 +48,7 @@
 [merge]
         conflictstyle = zdiff3
 
+[delta]
+  navitage = true # use n and N to move between diff sections
+  line-numbers = true
+  hyperlinks = true

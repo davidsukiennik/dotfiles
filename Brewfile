@@ -1,6 +1,7 @@
 brew "ast-grep"
 brew "diff-so-fancy"
 brew "git-credential-oauth"
+brew "git-delta"
 brew "git-extras"
 brew "lazygit"
 brew "neovim"
