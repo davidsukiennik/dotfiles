@@ -12,8 +12,8 @@ zstyle :compinstall filename '/home/davidsukiennik/.zshrc'
 export PATH=~/.local/bin:$PATH
 
 setopt correct
-export EDITOR=lvim
-alias vim=lvim
+export EDITOR=nvim
+alias vim=nvim
 
 ZIM_HOME=~/.zim
 
