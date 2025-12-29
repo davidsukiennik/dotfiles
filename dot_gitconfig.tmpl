@@ -1,9 +1,9 @@
 [user]
         email = {{ .email | quote }}
-        name = David Sukiennik
+        name = {{ .name }}
 [credential]
-	helper = cache --timeout 21600
-	helper = oauth
+        helper = cache --timeout 21600
+        helper = oauth
 [core]
         pager = delta
 [interactive]
@@ -47,8 +47,8 @@
         sort = version:refname
 [merge]
         conflictstyle = zdiff3
-
+        tool = nvimdiff
 [delta]
-  navitage = true # use n and N to move between diff sections
-  line-numbers = true
-  hyperlinks = true
+        navitage = true # use n and N to move between diff sections
+        line-numbers = true
+        hyperlinks = true
