@@ -1,4 +1,4 @@
-HISTFILE=~/.histfile
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
@@ -7,10 +7,19 @@ setopt correct
 setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
 
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+
 alias vim=nvim
 alias bw="flatpak run --command=bw com.bitwarden.desktop"
 
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+export XDG_BIN_HOME="$HOME/.local/bin"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_RUNTIME_DIR="$HOME/.local/run"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
